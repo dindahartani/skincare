@@ -6,7 +6,7 @@
   RdfNamespace::set('owl', 'http://www.w3.org/2002/07/owl#');
   RdfNamespace::set('skincare', 'http://www.semanticweb.org/asus/ontologies/2021/9/Skincare#');
 
-  $sparql = new Client('http://159.223.78.224/fuseki/skincarenew3/query');
+  $sparql = new Client('http://159.223.78.224/fuseki/skincarenew4/query');
 
   function parseData($str){
           return str_replace('http://www.semanticweb.org/asus/ontologies/2021/9/Skincare#','', $str);

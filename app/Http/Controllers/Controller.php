@@ -23,7 +23,7 @@ class Controller extends BaseController
         RdfNamespace::set('xsd', 'http://www.w3.org/2001/XMLSchema#');
         RdfNamespace::set('skincare', 'http://www.semanticweb.org/asus/ontologies/2021/9/Skincare#');
 
-        $this->sparql = new Client('http://159.223.78.224/fuseki/skincarenew3/query');
+        $this->sparql = new Client('http://159.223.78.224/fuseki/skincarenew4/query');
     }
 
     public function parseData($str){
