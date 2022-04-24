@@ -27,7 +27,7 @@ class MKController extends Controller
         public function show($mk)
     {
          //query untuk mengambil data skincare berdasarkan masalah kulit tertentu dan disimpan pada variabel result
-         $getnama = $this->sparql->query("SELECT* WHERE {?s skincare:Digunakan_Untuk_Mengatasi skincare:".$mk."; skincare:Nama ?namaprod ; skincare:Gambar ?gambar .} ORDER BY ?s");
+         $getnama = $this->sparql->query("SELECT* WHERE {?s skincare:digunakanUntukMengatasi skincare:".$mk."; skincare:Nama ?namaprod ; skincare:Gambar ?gambar .} ORDER BY ?s");
          $result = [];
          $jumlah = 0;
          foreach($getnama as $item){

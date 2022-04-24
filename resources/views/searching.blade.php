@@ -6,7 +6,7 @@
   RdfNamespace::set('owl', 'http://www.w3.org/2002/07/owl#');
   RdfNamespace::set('skincare', 'http://www.semanticweb.org/asus/ontologies/2021/9/Skincare#');
 
-  $sparql = new Client('http://159.223.78.224/fuseki/skincarenew4/query');
+  $sparql = new Client('http://159.223.78.224/fuseki/skincarenew6/query');
 
   function parseData($str){
           return str_replace('http://www.semanticweb.org/asus/ontologies/2021/9/Skincare#','', $str);
@@ -258,15 +258,15 @@ Halaman Searching
           $querydata = 'SELECT * WHERE { ?skincare rdf:type skincare:Nama_Produk';
          
           if ($_GET['merek']!="kosong") {
-            $querydata=$querydata.". ?skincare skincare:Memiliki_MerekSkincare skincare:".$_GET['merek'];
+            $querydata=$querydata.". ?skincare skincare:memilikiMerekSkincare skincare:".$_GET['merek'];
             
           } 
           if ($_GET['jenis']!="kosong") {
-            $querydata=$querydata.". ?skincare skincare:Memiliki_JenisSkincare skincare:".$_GET['jenis'];
+            $querydata=$querydata.". ?skincare skincare:memilikiJenisSkincare skincare:".$_GET['jenis'];
             
           }
           if ($_GET['usia']!="kosong") {
-            $querydata=$querydata.". ?skincare skincare:Digunakan_Untuk_Usia skincare:".$_GET['usia'];
+            $querydata=$querydata.". ?skincare skincare:digunakanUntukUsia skincare:".$_GET['usia'];
             
           } 
         
@@ -275,7 +275,7 @@ Halaman Searching
           if (isset($_GET['mk'])) {
           $hasilmk = $_GET['mk'];   
           foreach($hasilmk as $item){
-            $querydata = $querydata.". ?skincare skincare:Digunakan_Untuk_Mengatasi skincare:".$item."";
+            $querydata = $querydata.". ?skincare skincare:digunakanUntukMengatasi skincare:".$item."";
         }
 
       }
@@ -283,7 +283,7 @@ Halaman Searching
         if (isset($_GET['tk'])) {
           $hasiltk = $_GET['tk'];   
           foreach($hasiltk as $item){
-            $querydata = $querydata.". ?skincare skincare:Cocok_Untuk_Tipe_Kulit skincare:".$item."";
+            $querydata = $querydata.". ?skincare skincare:cocokUntukTipeKulit skincare:".$item."";
         }
       }
 
@@ -291,7 +291,7 @@ Halaman Searching
       if (isset($_GET['wp'])) {
           $hasilwp = $_GET['wp'];   
           foreach($hasilwp as $item){
-            $querydata = $querydata.". ?skincare skincare:Memiliki_WaktuPenggunaan skincare:".$item."";
+            $querydata = $querydata.". ?skincare skincare:memilikiWaktuPenggunaan skincare:".$item."";
         }
 
         // Spesifik

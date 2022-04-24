@@ -27,7 +27,7 @@ class JenisController extends Controller
         public function show($jenis)
     {
          //query untuk mengambil data skincare berdasarkan jenis tertentu dan disimpan pada variabel result
-         $getnama = $this->sparql->query("SELECT* WHERE {?s skincare:Memiliki_JenisSkincare skincare:".$jenis."; skincare:Nama ?namaprod ; skincare:Gambar ?gambar .} ORDER BY ?s");
+         $getnama = $this->sparql->query("SELECT* WHERE {?s skincare:memilikiJenisSkincare skincare:".$jenis."; skincare:Nama ?namaprod ; skincare:Gambar ?gambar .} ORDER BY ?s");
          $result = [];
          $jumlah = 0;
          foreach($getnama as $item){

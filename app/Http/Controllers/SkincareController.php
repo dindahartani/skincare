@@ -15,7 +15,7 @@ class SkincareController extends Controller
           }
   
           //query untuk mengambil semua data pada satu skincare
-          $sql = $this->sparql->query("SELECT * WHERE {skincare:".$idskincare." skincare:Memiliki_MerekSkincare ?m.  skincare:".$idskincare." skincare:Memiliki_JenisSkincare ?j.  skincare:".$idskincare." skincare:Digunakan_Untuk_Mengatasi ?mk. skincare:".$idskincare." skincare:Usia_Minimal ?u . skincare:".$idskincare." skincare:Harga ?h. skincare:".$idskincare." skincare:Volume ?v.skincare:".$idskincare." skincare:Deskripsi ?d. skincare:".$idskincare." skincare:Kandungan ?k. skincare:".$idskincare." skincare:Gambar ?gambar }");
+          $sql = $this->sparql->query("SELECT * WHERE {skincare:".$idskincare." skincare:memilikiMerekSkincare ?m.  skincare:".$idskincare." skincare:memilikiJenisSkincare ?j.  skincare:".$idskincare." skincare:digunakanUntukMengatasi ?mk. skincare:".$idskincare." skincare:Usia_Minimal ?u . skincare:".$idskincare." skincare:Harga ?h. skincare:".$idskincare." skincare:Volume ?v.skincare:".$idskincare." skincare:Deskripsi ?d. skincare:".$idskincare." skincare:Kandungan ?k. skincare:".$idskincare." skincare:Gambar ?gambar }");
           $jumlah = 0;
           foreach($sql as $item){
               $jumlah = $jumlah + 1;
@@ -36,7 +36,7 @@ class SkincareController extends Controller
           }
 
           //query untuk mengambil data tipekulit skincare
-          $gettk = $this->sparql->query("SELECT * WHERE { skincare:".$idskincare." skincare:Cocok_Untuk_Tipe_Kulit ?tk.}");
+          $gettk = $this->sparql->query("SELECT * WHERE { skincare:".$idskincare." skincare:cocokUntukTipeKulit ?tk.}");
           $jumlahtk = 0;
           foreach($gettk as $item){
               $jumlahtk = $jumlahtk + 1;
@@ -49,7 +49,7 @@ class SkincareController extends Controller
           }
           
            //query untuk mengambil data waktu penggunaan skincare
-           $getwp = $this->sparql->query("SELECT * WHERE { skincare:".$idskincare." skincare:Memiliki_WaktuPenggunaan ?wp.}");
+           $getwp = $this->sparql->query("SELECT * WHERE { skincare:".$idskincare." skincare:memilikiWaktuPenggunaan ?wp.}");
            $jumlahwp = 0;
            foreach($getwp as $item){
                $jumlahwp = $jumlahwp + 1;
@@ -62,7 +62,7 @@ class SkincareController extends Controller
            }
 
            //query untuk mengambil data usia skincare
-           $getu = $this->sparql->query("SELECT * WHERE { skincare:".$idskincare." skincare:Digunakan_Untuk_Usia ?u.}");
+           $getu = $this->sparql->query("SELECT * WHERE { skincare:".$idskincare." skincare:digunakanUntukUsia ?u.}");
            $jumlahu = 0;
            foreach($getu as $item){
                $jumlahu = $jumlahu + 1;

@@ -27,7 +27,7 @@ class UsiaController extends Controller
         public function show($usia)
     {
          //query untuk mengambil data skincare berdasarkan usia tertentu dan disimpan pada variabel result
-         $getnama = $this->sparql->query("SELECT* WHERE {?s skincare:Digunakan_Untuk_Usia skincare:".$usia."; skincare:Nama ?namaprod ; skincare:Gambar ?gambar .} ORDER BY ?s");
+         $getnama = $this->sparql->query("SELECT* WHERE {?s skincare:digunakanUntukUsia skincare:".$usia."; skincare:Nama ?namaprod ; skincare:Gambar ?gambar .} ORDER BY ?s");
          $result = [];
          $jumlah = 0;
          foreach($getnama as $item){

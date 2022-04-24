@@ -27,7 +27,7 @@ class TKController extends Controller
         public function show($tipekulit)
     {
          //query untuk mengambil data skincare berdasarkan tipe kulit tertentu dan disimpan pada variabel result
-         $getnama = $this->sparql->query("SELECT* WHERE {?s skincare:Cocok_Untuk_Tipe_Kulit skincare:".$tipekulit."; skincare:Nama ?namaprod ; skincare:Gambar ?gambar .} ORDER BY ?s");
+         $getnama = $this->sparql->query("SELECT* WHERE {?s skincare:cocokUntukTipeKulit skincare:".$tipekulit."; skincare:Nama ?namaprod ; skincare:Gambar ?gambar .} ORDER BY ?s");
          $result = [];
          $jumlah = 0;
          foreach($getnama as $item){
