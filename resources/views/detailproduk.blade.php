@@ -104,7 +104,7 @@ Detail Produk {{$nama}}
           <div class="col">
             <table class="table">
               <tbody>
-               
+                <div class="col-sm-12">
                 <tr>
                   <td>Harga</td>
                   <td>:</td>
@@ -125,6 +125,7 @@ Detail Produk {{$nama}}
                   <td>:</td>
                   <td>{{ $skincare[0]['kandungan'] }}</td>
                 </tr>
+                </div>
               </tbody>
             </table>
           </div>

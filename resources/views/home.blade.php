@@ -4,8 +4,8 @@
     
 @section('content')
 <div class="text-center">
-    <h1>Halo.. Selamat datang di website Skincare</h1>
-    <h6>Melalui website ini, kalian dapat melakukan <br>penjelajahan dan pencarian skincare sesuai kriteria yang kalian inginkan. 
+    <h1>Selamat Datang di Sistem Pencarian Produk Skincare</h1>
+    <h6>Melalui website ini, Anda dapat melakukan <br>penjelajahan dan pencarian skincare sesuai kriteria yang Anda inginkan. 
         <br>Website ini dibangun dengan menggunakan ontologi sebagai tulang punggungnya.</h6>
 
     <!--Card style-->

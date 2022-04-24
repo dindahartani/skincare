@@ -125,7 +125,7 @@ Halaman Searching
                           
                             ?> 
                              
-                           <div class="form-check col-3">
+                           <div class="form-check col-lg-3 col-sm-12">
                              <input class="form-check-input " name="tk[]" type="checkbox" id="tk" value="<?php echo $listidtk?>">
                              <label class="form-check-label" for="inlineCheckbox1"><?php echo $namatk ?></label>
                            </div>
@@ -166,7 +166,7 @@ Halaman Searching
                           
                             ?> 
                              
-                           <div class="form-check col-3">
+                           <div class="form-check col-lg-3 col-sm-12">
                              <input class="form-check-input " name="wp[]" type="checkbox" id="wp" value="<?php echo $listidwp?>">
                              <label class="form-check-label" for="inlineCheckbox1"><?php echo $namawp ?></label>
                            </div>
@@ -206,7 +206,7 @@ Halaman Searching
                           
                             ?> 
                              
-                           <div class="form-check col-6">
+                           <div class="form-check col-lg-6 col-sm-12 ">
                              <input class="form-check-input " name="mk[]" type="checkbox" id="mk" value="<?php echo $listidmk?>">
                              <label class="form-check-label" for="inlineCheckbox1"><?php echo $namamk ?></label>
                            </div>
